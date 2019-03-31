@@ -1,0 +1,29 @@
+title: Home
+icon: 'mdi:home-assistant'
+panel: false
+path: default_view
+badges:
+  - sensor.yr_symbol
+  - sun.sun
+cards:
+  - entities:
+      - light.wohnzimmer_links
+      - light.wohnzimmer_rechts
+      - light.zami
+      - light.sofa
+    show_header_toggle: true
+    title: Philips Funzeln
+    type: entities
+  - entities:
+      - entity: automation.licht_an_45min_vor_sonnenuntergang
+      - entity: automation.unter_der_woche_morgens_licht_an
+      - entity: automation.licht_aus_90min_nach_sonnenaufgang
+    title: Automatisierung
+    type: entities
+  - entities:
+      - entity: automation.push_nachricht_wenn_zu_warm_auf_balkon
+    title: Überwachungen
+    type: entities
+  - entities:
+      - sensor.netatmo_indoor_temperature
+    type: history-graph

@@ -1,0 +1,13 @@
+secrets.yaml
+*.db
+*.log
+.storage/*
+
+.idea*
+*.iml
+tts/*
+.HA_VERSION
+.uuid
+.homekit.state
+
+known_devices.yaml

@@ -1,0 +1,66 @@
+- alias: Licht an 45min vor Sonnenuntergang
+  trigger:
+  - event: sunset
+    offset: -00:45:00
+    platform: sun
+  condition: []
+  action:
+    - service: light.turn_on
+      entity_id: group.licht_philips
+      data:
+        brightness: 200
+        color_name: sandybrown
+    - service: notify.pushover_notification
+      data:
+        message: "Licht an..."
+        title: "...weil 45min vor Sonnenuntergang"
+        data:
+          #url: "https://www.home-assistant.io/"
+          sound: pianobar
+          priority: 0
+
+- alias: Licht aus 90min nach Sonnenaufgang
+  trigger:
+  - event: sunrise
+    offset: 01:30:00
+    platform: sun
+  condition: []
+  action:
+  - service: light.turn_off
+    entity_id: group.licht_philips
+
+- alias: Unter der Woche, morgens Licht an
+  trigger:
+    platform: time
+    at: '05:30:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: light.turn_on
+      entity_id: group.licht_philips 
+      data:
+        brightness: 255
+        color_name: lightcyan
+
+- alias: Push Nachricht wenn zu warm auf Balkon
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.netatmo_outdoor_temperature
+    above: 15
+  action:
+    - service: notify.pushover_notification
+      data:
+        message: "Balkon ist zu warm!"
+        title: "Aktuelle Temperatur {{ states.sensor.netatmo_outdoor_temperature.state }} Grad"
+        data:
+          sound: pianobar
+          priority: 0
+  condition:
+    condition: template
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.push_nachricht_wenn_zu_warm_auf_balkon.attributes.last_triggered | default(0)) | int > 14400)}}'

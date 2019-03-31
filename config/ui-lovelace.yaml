@@ -1,0 +1,5 @@
+title: Lemurenhöhle
+views:
+  - !include /config/lovelace/lovelace-home.yaml
+  - !include /config/lovelace/lovelace-netatmo.yaml
+  - !include /config/lovelace/lovelace-media.yaml

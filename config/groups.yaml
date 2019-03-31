@@ -1,0 +1,32 @@
+licht_philips:
+  name: Philips Funzeln
+  entities:
+    - light.wohnzimmer_links
+    - light.wohnzimmer_rechts
+    - light.zami
+    - light.sofa
+
+sound_sonos:
+  name: Sonos b00m
+  entities:
+    - media_player.bathroom
+    - media_player.bedroom
+    - media_player.connect_via_avr
+    - media_player.kitchen
+    - media_player.office
+    - media_player.playbar_tv
+
+netatmo_sensors:
+  name: Netatmo
+  entities:
+    - sensor.netatmo_indoor_temperature
+    - sensor.netatmo_indoor_humidity
+    - sensor.netatmo_indoor_co2
+    - sensor.netatmo_indoor_noise
+    - sensor.netatmo_indoor_pressure
+    - sensor.netatmo_indoor_wifi
+    - sensor.netatmo_outdoor_temperature
+    - sensor.netatmo_outdoor_humidity
+    - sensor.netatmo_outdoor_battery_percent
+    - sensor.netatmo_outdoor_battery
+    - sensor.netatmo_outdoor_radio

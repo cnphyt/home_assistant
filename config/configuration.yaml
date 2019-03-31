@@ -1,0 +1,77 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: !secret ha_instance_name
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 415
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Zurich
+  # Customization file
+  customize: !include customize.yaml
+
+lovelace:
+  mode: yaml
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://ha:3218
+    
+# Example configuration.yaml entry
+netatmo:
+  api_key: !secret netatmo_api_key
+  secret_key: !secret netatmo_secret_key
+  username: !secret netatmo_username
+  password: !secret netatmo_password
+
+media_player:
+  - platform: yamaha
+    host: 192.168.3.150
+    source_names:
+      HDMI1: "TV"
+      HDMI2: "SWITCH"
+      HDMI3: "PS3"
+      HDMI4: "CHROMECAS"
+      HDMI5: "HDMI5"
+      AV1: "Sonos"
+      AV4: "HDMI ARC"
+      AV5: "BLUETOOTH"
+      AUX: "Phono"
+
+influxdb:
+  host: !secret influxdb_host
+  port: 8086
+  database: ha
+  max_retries: 3
+  default_measurement: state
+
+notify:
+  - name: pushover_notification
+    platform: pushover
+    api_key: !secret pushover_api_key
+    user_key: !secret pushover_user_key
