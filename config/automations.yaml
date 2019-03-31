@@ -57,7 +57,7 @@
     - service: notify.pushover_notification
       data:
         title: "Balkon ist zu warm!"
-         message: "Aktuelle Temperatur {{ states.sensor.netatmo_outdoor_temperature.state }} Grad"
+        message: "Aktuelle Temperatur {{ states.sensor.netatmo_outdoor_temperature.state }} Grad"
         data:
           sound: pianobar
           priority: 0
