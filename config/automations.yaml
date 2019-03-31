@@ -12,8 +12,8 @@
         color_name: sandybrown
     - service: notify.pushover_notification
       data:
-        message: "Licht an..."
-        title: "...weil 45min vor Sonnenuntergang"
+        title: "Licht an..."
+        message: "...weil 45min vor Sonnenuntergang"
         data:
           #url: "https://www.home-assistant.io/"
           sound: pianobar
@@ -56,8 +56,8 @@
   action:
     - service: notify.pushover_notification
       data:
-        message: "Balkon ist zu warm!"
-        title: "Aktuelle Temperatur {{ states.sensor.netatmo_outdoor_temperature.state }} Grad"
+        title: "Balkon ist zu warm!"
+         message: "Aktuelle Temperatur {{ states.sensor.netatmo_outdoor_temperature.state }} Grad"
         data:
           sound: pianobar
           priority: 0
