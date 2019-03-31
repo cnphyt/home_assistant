@@ -25,5 +25,10 @@ cards:
     title: Überwachungen
     type: entities
   - entities:
+      - entity: person.patrick
+      - entity: person.jenny
+    title: People
+    type: entities
+  - entities:
       - sensor.netatmo_indoor_temperature
     type: history-graph

@@ -63,3 +63,12 @@ notify:
 
 device_tracker:
   - platform: bluetooth_tracker
+  - platform: nmap_tracker
+    hosts:
+    - 192.168.3.246
+    - 192.168.3.127
+    track_new_devices: no
+    interval_seconds: 30
+    consider_home: 7
+
+person: !include people.yaml
