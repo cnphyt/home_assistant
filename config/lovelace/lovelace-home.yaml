@@ -5,30 +5,38 @@ path: default_view
 badges:
   - sensor.yr_symbol
   - sun.sun
+  - sensor.netatmo_indoor_temperature
+  - sensor.netatmo_bedroom_temperature
 cards:
-  - entities:
+  - title: Philips Funzeln
+    type: entities
+    show_header_toggle: true
+    entities:
       - light.wohnzimmer_links
       - light.wohnzimmer_rechts
       - light.zami
       - light.sofa
-    show_header_toggle: true
-    title: Philips Funzeln
+  - title: Automatisierung
     type: entities
-  - entities:
+    entities:
       - entity: automation.licht_an_45min_vor_sonnenuntergang
       - entity: automation.unter_der_woche_morgens_licht_an
       - entity: automation.licht_aus_90min_nach_sonnenaufgang
-    title: Automatisierung
+  - title: Überwachungen
     type: entities
-  - entities:
+    entities:
       - entity: automation.push_nachricht_wenn_zu_warm_auf_balkon
-    title: Überwachungen
+  - title: People
     type: entities
-  - entities:
+    entities:
       - entity: person.patrick
       - entity: person.jenny
-    title: People
-    type: entities
-  - entities:
-      - sensor.netatmo_indoor_temperature
+  - title: Temperatur innen
     type: history-graph
+    entities:
+      - sensor.netatmo_indoor_temperature
+      - sensor.netatmo_bedroom_temperature
+  - title: Strom
+    type: history-graph
+    entities:
+      - entity: switch.strom_tv_rack

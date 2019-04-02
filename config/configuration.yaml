@@ -72,3 +72,8 @@ device_tracker:
     consider_home: 7
 
 person: !include people.yaml
+
+switch:
+  - platform: mystrom
+    host: 192.168.3.142
+    name: Strom TV Rack
