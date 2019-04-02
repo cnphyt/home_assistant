@@ -4,15 +4,8 @@ title: Licht
 badges: []
 cards:
   - entities:
-    - title: Wohnzimmer Sofa
-      type: light
-      entity: light.sofa
-    - title: Wohnzimmer links
-      type: light
-      entity: light.wohnzimmer_links
-    - title: Wohnzimmer rechts
-      type: light
-      entity: light.wohnzimmer_rechts
-    - title: Wohnzimmer Zami
-      type: light
-      entity: light.zami
+      - light.sofa
+      - light.wohnzimmer_links
+      - light.wohnzimmer_rechts
+      - light.zami
+    type: light

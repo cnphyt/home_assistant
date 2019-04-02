@@ -1,0 +1,11 @@
+icon: 'mdi:flower'
+panel: true
+title: Pflanzen
+badges: []
+cards:
+  - entities:
+      - sensor.hochbeet_conductivity
+      - sensor.hochbeet_light_intensity
+      - sensor.hochbeet_moisture
+      - sensor.hochbeet_temperature
+    type: history-graph
