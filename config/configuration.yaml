@@ -52,7 +52,6 @@ influxdb:
   host: !secret influxdb_host
   port: 8086
   database: ha
-  max_retries: 3
   default_measurement: state
 
 notify:
@@ -77,3 +76,14 @@ switch:
   - platform: mystrom
     host: 192.168.3.142
     name: Strom TV Rack
+  - platform: mystrom
+    host: 192.168.3.233
+    name: Strom Büro Server
+
+sensor:
+  - platform: miflora
+    mac: 'C4:7C:8D:67:65:DC'
+    name: Hochbeet
+    force_update: true
+    scan_interval: 600
+    median: 3
