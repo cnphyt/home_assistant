@@ -12,9 +12,6 @@ lovelace:
 
 default_config:
 
-sensor:
-  - platform: yr
-
 tts:
   - platform: google
 
@@ -33,20 +30,6 @@ netatmo:
   secret_key: !secret netatmo_secret_key
   username: !secret netatmo_username
   password: !secret netatmo_password
-
-media_player:
-  - platform: yamaha
-    host: 192.168.3.150
-    source_names:
-      HDMI1: "TV"
-      HDMI2: "SWITCH"
-      HDMI3: "PS3"
-      HDMI4: "CHROMECAS"
-      HDMI5: "HDMI5"
-      AV1: "Sonos"
-      AV4: "HDMI ARC"
-      AV5: "BLUETOOTH"
-      AUX: "Phono"
 
 influxdb:
   host: !secret influxdb_host
@@ -71,15 +54,6 @@ device_tracker:
     consider_home: 7
 
 person: !include people.yaml
-
-switch:
-  - platform: mystrom
-    host: 192.168.3.142
-    name: Strom TV Rack
-  - platform: mystrom
-    host: 192.168.3.233
-    name: Strom Büro Server
-
 sensor:
   - platform: miflora
     mac: 'C4:7C:8D:67:65:DC'
@@ -87,3 +61,17 @@ sensor:
     force_update: true
     scan_interval: 600
     median: 3
+  - platform: yr
+switch:
+  - platform: mystrom
+    host: 192.168.3.142
+    name: Strom TV Rack
+  - platform: mystrom
+    host: 192.168.3.233
+    name: Strom Büro Server
+  - platform: mystrom
+    host: 192.168.3.221
+    name: Strom Büro Patrick
+  - platform: mystrom
+    host: 192.168.3.237
+    name: Strom Küche

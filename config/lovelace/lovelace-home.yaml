@@ -16,28 +16,20 @@ cards:
       - light.wohnzimmer_rechts
       - light.zami
       - light.sofa
-  - title: Automatisierung
-    type: entities
-    entities:
-      - entity: automation.licht_an_45min_vor_sonnenuntergang
-      - entity: automation.unter_der_woche_morgens_licht_an
-      - entity: automation.licht_aus_90min_nach_sonnenaufgang
-  - title: Überwachungen
-    type: entities
-    entities:
-      - entity: automation.push_nachricht_wenn_zu_warm_auf_balkon
-  - title: People
-    type: entities
-    entities:
-      - entity: person.patrick
-      - entity: person.jenny
   - title: Temperatur innen
     type: history-graph
     entities:
       - sensor.netatmo_indoor_temperature
       - sensor.netatmo_bedroom_temperature
+  - title: Temperatur aussen
+    type: history-graph
+    entities:
+      - sensor.netatmo_outdoor_temperature
+      - sensor.hochbeet_temperature
   - title: Strom
     type: history-graph
     entities:
       - entity: switch.strom_tv_rack
       - entity: switch.strom_buro_server
+      - entity: switch.strom_buro_patrick
+      - entity: switch.strom_kuche

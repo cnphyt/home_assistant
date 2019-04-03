@@ -1,0 +1,20 @@
+icon: 'mdi-clock'
+panel: true
+title: Automatisierungen
+badges: []
+cards:
+  - title: Automatisierung
+    type: entities
+    entities:
+      - entity: automation.licht_an_45min_vor_sonnenuntergang
+      - entity: automation.unter_der_woche_morgens_licht_an
+      - entity: automation.licht_aus_90min_nach_sonnenaufgang
+  - title: Überwachungen
+    type: entities
+    entities:
+      - entity: automation.push_nachricht_wenn_zu_warm_auf_balkon
+  - title: People
+    type: entities
+    entities:
+      - entity: person.patrick
+      - entity: person.jenny
