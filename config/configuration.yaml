@@ -62,6 +62,26 @@ sensor:
     scan_interval: 600
     median: 3
   - platform: yr
+  - platform: rest
+    resource: http://192.168.3.142/report
+    value_template: "{{ value_json.temperature | round(1) }}"
+    name: "Temperatur Wand TV Rack"
+    unit_of_measurement: °C
+  - platform: rest
+    resource: http://192.168.3.233/report
+    value_template: "{{ value_json.temperature | round(1) }}"
+    name: "Temperatur Wand Büro Server"
+    unit_of_measurement: °C
+  - platform: rest
+    resource: http://192.168.3.221/report
+    value_template: "{{ value_json.temperature | round(1) }}"
+    name: "Temperatur Wand Büro Patrick"
+    unit_of_measurement: °C
+  - platform: rest
+    resource: http://192.168.3.237/report
+    value_template: "{{ value_json.temperature | round(1) }}"
+    name: "Temperatur Wand Küche"
+    unit_of_measurement: °C
 switch:
   - platform: mystrom
     host: 192.168.3.142
