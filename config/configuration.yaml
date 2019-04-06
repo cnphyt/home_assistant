@@ -82,6 +82,11 @@ sensor:
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand Küche"
     unit_of_measurement: °C
+  - platform: rest
+    resource: http://192.168.3.101/report
+    value_template: "{{ value_json.temperature | round(1) }}"
+    name: "Temperatur Wand WoZi rechts"
+    unit_of_measurement: °C
 switch:
   - platform: mystrom
     host: 192.168.3.142
@@ -95,3 +100,6 @@ switch:
   - platform: mystrom
     host: 192.168.3.237
     name: Strom Küche
+  - platform: mystrom
+    host: 192.168.3.101
+    name: Strom WoZi rechts
