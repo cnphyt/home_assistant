@@ -16,6 +16,14 @@ cards:
       - light.wohnzimmer_rechts
       - light.zami
       - light.sofa
+  - title: Strom
+    type: history-graph
+    entities:
+      - entity: switch.strom_tv_rack
+      #- entity: switch.strom_buro_server
+      - entity: switch.strom_buro_patrick
+      - entity: switch.strom_kuche
+      - entity: switch.strom_wozi_rechts
   - title: Temperatur innen
     type: history-graph
     entities:
@@ -26,10 +34,3 @@ cards:
     entities:
       - sensor.netatmo_outdoor_temperature
       - sensor.hochbeet_temperature
-  - title: Strom
-    type: history-graph
-    entities:
-      - entity: switch.strom_tv_rack
-      #- entity: switch.strom_buro_server
-      - entity: switch.strom_buro_patrick
-      - entity: switch.strom_kuche
