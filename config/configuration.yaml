@@ -91,12 +91,20 @@ sensor:
     host: !secret influxdb_host
     port: 8086
     queries:
-      - name: Hochbeet max last 12h
+      - name: Hochbeet temperature max last 12h
         unit_of_measurement: '°C'
         value_template: '{{ value | round(1) }}'
         group_function: max
         where: '"entity_id" = ''hochbeet_temperature'' and time > now() - 12h'
         measurement: '"°C"'
+        field: value
+        database: ha
+      - name: Hochbeet moisture min last 12h
+        unit_of_measurement: '%'
+        value_template: '{{ value | round(1) }}'
+        group_function: min
+        where: '"entity_id" = ''hochbeet_moisture'' and time > now() - 12h'
+        measurement: '"%"'
         field: value
         database: ha
 switch:
