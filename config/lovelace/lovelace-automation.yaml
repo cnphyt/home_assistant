@@ -12,7 +12,7 @@ cards:
   - title: Überwachungen
     type: entities
     entities:
-      - entity: automation.push_nachricht_wenn_zu_warm_auf_balkon
+      - entity: automation.push_nachricht_wenn_hochbeet_uber_20_grad
   - title: People
     type: entities
     entities:

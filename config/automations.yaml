@@ -10,14 +10,6 @@
       data:
         brightness: 200
         color_name: sandybrown
-    - service: notify.pushover_notification
-      data:
-        title: "Licht an..."
-        message: "...weil 45min vor Sonnenuntergang"
-        data:
-          #url: "https://www.home-assistant.io/"
-          sound: pianobar
-          priority: 0
 
 - alias: Licht aus 90min nach Sonnenaufgang
   trigger:
@@ -48,19 +40,25 @@
         brightness: 255
         color_name: lightcyan
 
-- alias: Push Nachricht wenn zu warm auf Balkon
+- alias: Push Nachricht wenn Hochbeet über 20 Grad
   trigger:
     platform: numeric_state
-    entity_id: sensor.netatmo_outdoor_temperature
-    above: 25
+    entity_id: sensor.hochbeet_temperature_max_last_12h
+    above: 20
   action:
     - service: notify.pushover_notification
       data:
-        title: "Balkon ist zu warm!"
-        message: "Aktuelle Temperatur {{ states.sensor.netatmo_outdoor_temperature.state }} Grad"
+        title: "Hochbeet sehr warm!"
+        message: |
+          Balkon:
+          - {{ states.sensor.netatmo_outdoor_temperature.state }} °C
+          Hochbeet:
+          - {{ states.sensor.hochbeet_temperature.state }} °C ({{ states.sensor.hochbeet_temperature_max_last_12h.state }} °C max/12h)
+          - {{ states.sensor.hochbeet_moisture.state }} % Feuchtigkeit ({{ states.sensor.hochbeet_moisture_min_last_12h.state }} % min/12h)
+          - {{ states.sensor.hochbeet_light_intensity.state }} lx
         data:
           sound: pianobar
           priority: 0
   condition:
     condition: template
-    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.push_nachricht_wenn_zu_warm_auf_balkon.attributes.last_triggered | default(0)) | int > 14400)}}'
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.automation.push_nachricht_wenn_hochbeet_uber_20_grad.attributes.last_triggered | default(0)) | int > 14400)}}'
