@@ -62,3 +62,26 @@
   condition:
     condition: template
     value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.automation.push_nachricht_wenn_hochbeet_uber_20_grad.attributes.last_triggered | default(0)) | int > 14400)}}'
+
+- alias: Push Nachricht wenn Hochbeet unter 17 Prozent Feuchtigkeot
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.hochbeet_moisture_min_last_12h
+    below: 17
+  action:
+    - service: notify.pushover_notification
+      data:
+        title: "Hochbeet trocken!"
+        message: |
+          Balkon:
+          - {{ states.sensor.netatmo_outdoor_temperature.state }} °C
+          Hochbeet:
+          - {{ states.sensor.hochbeet_temperature.state }} °C ({{ states.sensor.hochbeet_temperature_max_last_12h.state }} °C max/12h)
+          - {{ states.sensor.hochbeet_moisture.state }} % Feuchtigkeit ({{ states.sensor.hochbeet_moisture_min_last_12h.state }} % min/12h)
+          - {{ states.sensor.hochbeet_light_intensity.state }} lx
+        data:
+          sound: pianobar
+          priority: 0
+  condition:
+    condition: template
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.automation.push_nachricht_wenn_hochbeet_unter_17_prozent_feuchtigkeit.attributes.last_triggered | default(0)) | int > 14400)}}'
