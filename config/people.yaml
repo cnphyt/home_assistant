@@ -1,7 +1,6 @@
 - name: Patrick
   id: path
   device_trackers:
-    - device_tracker.i_can_haz_internet
     - device_tracker.hm20pro_lan
 
 - name: Jenny
