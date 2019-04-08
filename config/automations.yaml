@@ -63,15 +63,49 @@
     condition: template
     value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.automation.push_nachricht_wenn_hochbeet_uber_20_grad.attributes.last_triggered | default(0)) | int > 14400)}}'
 
-- alias: Push Nachricht wenn Hochbeet unter 17 Prozent Feuchtigkeot
+#- alias: Push Nachricht wenn Hochbeet unter 17 Prozent Feuchtigkeit
+#  trigger:
+#    platform: numeric_state
+#    entity_id: sensor.hochbeet_moisture_min_last_12h
+#    below: 17
+#  action:
+#    - service: notify.pushover_notification
+#      data:
+#        title: "Hochbeet trocken!"
+#        message: |
+#          Balkon:
+#          - {{ states.sensor.netatmo_outdoor_temperature.state }} °C
+#          Hochbeet:
+#          - {{ states.sensor.hochbeet_temperature.state }} °C ({{ states.sensor.hochbeet_temperature_max_last_12h.state }} °C max/12h)
+#          - {{ states.sensor.hochbeet_moisture.state }} % Feuchtigkeit ({{ states.sensor.hochbeet_moisture_min_last_12h.state }} % min/12h)
+#          - {{ states.sensor.hochbeet_light_intensity.state }} lx
+#        data:
+#          sound: pianobar
+#          priority: 0
+#  condition:
+#    condition: template
+#    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.automation.push_nachricht_wenn_hochbeet_unter_17_prozent_feuchtigkeit.attributes.last_triggered | default(0)) | int > 14400)}}'
+
+- alias: Push Nachricht an Patrick wenn zuhause und Beet zu trocken war
   trigger:
-    platform: numeric_state
-    entity_id: sensor.hochbeet_moisture_min_last_12h
-    below: 17
+    - platform: numeric_state
+      entity_id: sensor.hochbeet_moisture_min_last_12h
+      below: 17
+    - platform: state
+      entity_id: person.patrick
+      to: 'home'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: 'person.patrick'
+        state: 'home'
+      - condition: template
+        value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.push_nachricht_an_patrick_wenn_zuhause_und_beet_zu_trocken_war.attributes.last_triggered | default(0)) | int > 14400 )}}'
   action:
     - service: notify.pushover_notification
       data:
-        title: "Hochbeet trocken!"
+        title: "Hochbeet giessen"
         message: |
           Balkon:
           - {{ states.sensor.netatmo_outdoor_temperature.state }} °C
@@ -82,6 +116,3 @@
         data:
           sound: pianobar
           priority: 0
-  condition:
-    condition: template
-    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.automation.push_nachricht_wenn_hochbeet_unter_17_prozent_feuchtigkeit.attributes.last_triggered | default(0)) | int > 14400)}}'
