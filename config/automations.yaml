@@ -40,11 +40,11 @@
         brightness: 255
         color_name: lightcyan
 
-- alias: Push Nachricht wenn Hochbeet über 20 Grad
+- alias: Push Nachricht wenn Hochbeet über 25 Grad
   trigger:
     platform: numeric_state
     entity_id: sensor.hochbeet_temperature_max_last_12h
-    above: 20
+    above: 25
   action:
     - service: notify.pushover_notification
       data:
@@ -61,7 +61,7 @@
           priority: 0
   condition:
     condition: template
-    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.automation.push_nachricht_wenn_hochbeet_uber_20_grad.attributes.last_triggered | default(0)) | int > 14400)}}'
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.automation.push_nachricht_wenn_hochbeet_uber_25_grad.attributes.last_triggered | default(0)) | int > 14400)}}'
 
 - alias: Push Nachricht an Patrick wenn zuhause und Beet zu trocken war
   trigger:
