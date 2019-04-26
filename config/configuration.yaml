@@ -42,7 +42,12 @@ notify:
     platform: pushover
     api_key: !secret pushover_api_key
     user_key: !secret pushover_user_key
-
+  - name: lametric_notification
+    platform: lametric
+    lifetime: 20
+    icon: a7956
+    cycles: 3
+    priority: info
 device_tracker:
   - platform: nmap_tracker
     hosts:
@@ -86,6 +91,16 @@ sensor:
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand WoZi rechts"
     unit_of_measurement: °C
+  - platform: rest
+    resource: http://192.168.3.211/report
+    value_template: "{{ value_json.temperature | round(1) }}"
+    name: "Temperatur Wand Balkon"
+    unit_of_measurement: °C
+  - platform: rest
+    resource: http://192.168.3.238/report
+    value_template: "{{ value_json.temperature | round(1) }}"
+    name: "Temperatur Wand Zami"
+    unit_of_measurement: °C
   - platform: influxdb
     host: !secret influxdb_host
     port: 8086
@@ -122,3 +137,13 @@ switch:
   - platform: mystrom
     host: 192.168.3.101
     name: Strom WoZi rechts
+  - platform: mystrom
+    host: 192.168.3.211
+    name: Strom Balkon
+  - platform: mystrom
+    host: 192.168.3.238
+    name: Strom Zami
+
+lametric:
+  client_id:  !secret lametric_client_id
+  client_secret: !secret lametric_client_secret
