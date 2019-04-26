@@ -11,7 +11,7 @@ cards:
   - title: Überwachungen
     type: entities
     entities:
-      - entity: automation.push_nachricht_wenn_hochbeet_uber_20_grad
+      - entity: automation.push_nachricht_wenn_hochbeet_uber_25_grad
       - entity: automation.push_nachricht_an_patrick_wenn_zuhause_und_beet_zu_trocken_war
   - title: People
     type: entities
