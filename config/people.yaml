@@ -1,9 +1,9 @@
 - name: Patrick
   id: path
   device_trackers:
-    - device_tracker.hm20pro_lan
+    - device_tracker.hm20pro
 
 - name: Jenny
   id: jenny
   device_trackers:
-    - device_tracker.gs10_lan
+    - device_tracker.gs10
