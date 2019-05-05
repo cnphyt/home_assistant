@@ -12,9 +12,6 @@ lovelace:
 
 default_config:
 
-tts:
-  - platform: google
-
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
@@ -24,7 +21,7 @@ panel_iframe:
     title: Configurator
     icon: mdi:wrench
     url: http://ha:3218
-    
+
 netatmo:
   api_key: !secret netatmo_api_key
   secret_key: !secret netatmo_secret_key
@@ -63,7 +60,7 @@ sensor:
     mac: 'C4:7C:8D:67:65:DC'
     name: Hochbeet
     force_update: true
-    scan_interval: 600
+    scan_interval: 900
     median: 3
   - platform: yr
   - platform: rest
@@ -71,36 +68,37 @@ sensor:
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand TV Rack"
     unit_of_measurement: °C
+    scan_interval: 180
   - platform: rest
     resource: http://192.168.3.233/report
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand Büro Server"
     unit_of_measurement: °C
+    scan_interval: 180
   - platform: rest
     resource: http://192.168.3.221/report
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand Büro Patrick"
     unit_of_measurement: °C
+    scan_interval: 180
   - platform: rest
     resource: http://192.168.3.237/report
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand Küche"
     unit_of_measurement: °C
+    scan_interval: 180
   - platform: rest
     resource: http://192.168.3.101/report
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand WoZi rechts"
     unit_of_measurement: °C
+    scan_interval: 180
   - platform: rest
     resource: http://192.168.3.211/report
     value_template: "{{ value_json.temperature | round(1) }}"
     name: "Temperatur Wand Balkon"
     unit_of_measurement: °C
-  - platform: rest
-    resource: http://192.168.3.238/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Wand Zami"
-    unit_of_measurement: °C
+    scan_interval: 180
   - platform: influxdb
     host: !secret influxdb_host
     port: 8086
@@ -125,24 +123,27 @@ switch:
   - platform: mystrom
     host: 192.168.3.142
     name: Strom TV Rack
+    scan_interval: 10
   - platform: mystrom
     host: 192.168.3.233
     name: Strom Büro Server
+    scan_interval: 10
   - platform: mystrom
     host: 192.168.3.221
     name: Strom Büro Patrick
+    scan_interval: 10
   - platform: mystrom
     host: 192.168.3.237
     name: Strom Küche
+    scan_interval: 10
   - platform: mystrom
     host: 192.168.3.101
     name: Strom WoZi rechts
+    scan_interval: 10
   - platform: mystrom
     host: 192.168.3.211
     name: Strom Balkon
-  - platform: mystrom
-    host: 192.168.3.238
-    name: Strom Zami
+    scan_interval: 10
 
 lametric:
   client_id:  !secret lametric_client_id
