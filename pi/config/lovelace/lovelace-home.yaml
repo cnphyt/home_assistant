@@ -1,0 +1,14 @@
+title: Home
+icon: 'mdi:home-assistant'
+panel: false
+path: default_view
+badges:
+  - sensor.yr_symbol
+  - sun.sun
+  - sensor.netatmo_indoor_temperature
+  - sensor.netatmo_bedroom_temperature
+cards:
+  - entities:
+      - sensor.hochbeet_conductivity
+      - sensor.hochbeet_light_intensity
+    type: history-graph
