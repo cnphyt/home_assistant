@@ -25,7 +25,7 @@ cards:
       - entity: switch.strom_kuche
       - entity: switch.strom_wozi_rechts
       - entity: switch.strom_balkon
-      - entity: switch.strom_zami
+      #- entity: switch.strom_zami
   - title: Temperatur innen
     type: history-graph
     entities:
