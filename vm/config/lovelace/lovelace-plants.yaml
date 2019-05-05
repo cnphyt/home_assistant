@@ -4,8 +4,8 @@ title: Pflanzen
 badges: []
 cards:
   - entities:
-      - sensor.hochbeet_conductivity
-      - sensor.hochbeet_light_intensity
-      - sensor.hochbeet_moisture
-      - sensor.hochbeet_temperature
+      - sensor.hochbeet_conductivity_last_value
+      - sensor.hochbeet_light_intensity_last_value
+      - sensor.hochbeet_moisture_last_value
+      - sensor.hochbeet_temperature_last_value
     type: history-graph

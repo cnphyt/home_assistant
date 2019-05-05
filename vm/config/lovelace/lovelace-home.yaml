@@ -16,6 +16,38 @@ cards:
       - light.wohnzimmer_rechts
       - light.zami
       - light.sofa
+  - title: Hochbeet via Grafana
+    type: history-graph
+    show_header_toggle: false
+    entities:
+      - type: sensor
+        entity: sensor.hochbeet_conductivity_last_value
+        name: Hochbeet Leitfähigkeit
+        graph: line
+        unit: 'µS'
+        detail: 2
+        icon: 'mdi:format-underline'
+      - type: sensor
+        entity: sensor.hochbeet_light_intensity_last_value
+        name: Hochbeet Lichtintensität
+        graph: line
+        unit: 'lx'
+        detail: 2
+        icon: 'mdi:weather-sunny'
+      - type: sensor
+        entity: sensor.hochbeet_moisture_last_value
+        name: Hochbeet Feuchtigkeit
+        graph: line
+        unit: '%'
+        detail: 2
+        icon: 'mdi:mushroom'
+      - type: sensor
+        entity: sensor.hochbeet_temperature_last_value
+        name: Hochbeet Temperatur
+        graph: line
+        unit: '°C'
+        detail: 2
+        icon: 'mdi:thermometer'
   - title: Strom
     type: history-graph
     entities:
@@ -35,4 +67,4 @@ cards:
     type: history-graph
     entities:
       - sensor.netatmo_outdoor_temperature
-      - sensor.hochbeet_temperature
+      - sensor.hochbeet_temperature_last_value

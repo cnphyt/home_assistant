@@ -1,7 +1,7 @@
 - alias: Licht an 45min vor Sonnenuntergang
   trigger:
   - event: sunset
-    offset: -00:45:00
+    offset: -01:00:00
     platform: sun
   condition: []
   action:
@@ -14,7 +14,7 @@
 - alias: Licht aus 90min nach Sonnenaufgang
   trigger:
   - event: sunrise
-    offset: 01:30:00
+    offset: 01:00:00
     platform: sun
   condition: []
   action:
@@ -96,3 +96,12 @@
         data:
           sound: pianobar
           priority: 0
+
+- alias: 'Set theme at startup'
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    service: frontend.set_theme
+    data:
+      name: darkgreen

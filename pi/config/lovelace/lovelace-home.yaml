@@ -9,6 +9,8 @@ badges:
   - sensor.netatmo_bedroom_temperature
 cards:
   - entities:
-      - sensor.hochbeet_conductivity
+      - sensor.hochbeet_temperature
+      - sensor.hochbeet_moisture
       - sensor.hochbeet_light_intensity
+      - sensor.hochbeet_conductivity
     type: history-graph
