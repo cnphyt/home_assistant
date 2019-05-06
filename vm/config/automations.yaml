@@ -69,13 +69,13 @@
       entity_id: sensor.hochbeet_moisture_min_last_12h
       below: 17
     - platform: state
-      entity_id: person.patrick
+      entity_id: person.patrick_tracker
       to: 'home'
   condition:
     condition: and
     conditions:
       - condition: state
-        entity_id: 'person.patrick'
+        entity_id: 'person.patrick_tracker'
         state: 'home'
       - condition: numeric_state
         entity_id: 'sensor.hochbeet_moisture_min_last_12h'

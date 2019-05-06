@@ -16,5 +16,5 @@ cards:
   - title: People
     type: entities
     entities:
-      - entity: person.patrick
-      - entity: person.jenny
+      - entity: person.patrick_tracker
+      - entity: person.jenny_tracker
