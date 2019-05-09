@@ -38,3 +38,20 @@
     data:
       topic: "home/sensors/"
       payload_template: "{{ states.sensor.hochbeet_temperature.state }}"
+
+- alias: Restart HA
+  trigger:
+    platform: time
+    at: "01:33:37"
+  condition:
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+    - sat
+    - sun
+  action:
+    - service: homeassistant.restart

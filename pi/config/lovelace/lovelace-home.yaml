@@ -3,14 +3,9 @@ icon: 'mdi:home-assistant'
 panel: false
 path: default_view
 badges:
-  - sensor.yr_symbol
   - sun.sun
-  - sensor.netatmo_indoor_temperature
-  - sensor.netatmo_bedroom_temperature
 cards:
-  - entities:
-      - sensor.hochbeet_temperature
-      - sensor.hochbeet_moisture
-      - sensor.hochbeet_light_intensity
-      - sensor.hochbeet_conductivity
-    type: history-graph
+  - type: plant-status
+    entity: plant.hochbeet_epic_mega_plant
+  - type: plant-status
+    entity: plant.jolokia_chili_plant
