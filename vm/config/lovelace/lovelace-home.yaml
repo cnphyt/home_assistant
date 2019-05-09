@@ -8,6 +8,10 @@ badges:
   - sensor.netatmo_indoor_temperature
   - sensor.netatmo_bedroom_temperature
 cards:
+  - type: plant-status
+    entity: plant.hochbeet_epic_mega_plant
+  - type: plant-status
+    entity: plant.jolokia_chili_plant
   - title: Philips Funzeln
     type: entities
     show_header_toggle: true
@@ -16,48 +20,14 @@ cards:
       - light.wohnzimmer_rechts
       - light.zami
       - light.sofa
-  - title: Hochbeet via Grafana
-    type: history-graph
-    show_header_toggle: false
-    entities:
-      - type: sensor
-        entity: sensor.hochbeet_conductivity_last_value
-        name: Hochbeet Leitfähigkeit
-        graph: line
-        unit: 'µS'
-        detail: 2
-        icon: 'mdi:format-underline'
-      - type: sensor
-        entity: sensor.hochbeet_light_intensity_last_value
-        name: Hochbeet Lichtintensität
-        graph: line
-        unit: 'lx'
-        detail: 2
-        icon: 'mdi:weather-sunny'
-      - type: sensor
-        entity: sensor.hochbeet_moisture_last_value
-        name: Hochbeet Feuchtigkeit
-        graph: line
-        unit: '%'
-        detail: 2
-        icon: 'mdi:mushroom'
-      - type: sensor
-        entity: sensor.hochbeet_temperature_last_value
-        name: Hochbeet Temperatur
-        graph: line
-        unit: '°C'
-        detail: 2
-        icon: 'mdi:thermometer'
   - title: Strom
     type: history-graph
     entities:
       - entity: switch.strom_tv_rack
-      #- entity: switch.strom_buro_server
       - entity: switch.strom_buro_patrick
       - entity: switch.strom_kuche
       - entity: switch.strom_wozi_rechts
       - entity: switch.strom_balkon
-      #- entity: switch.strom_zami
   - title: Temperatur innen
     type: history-graph
     entities:

@@ -151,6 +151,81 @@ sensor:
         measurement: '"µS/cm"'
         field: value
         database: ha
+      - name: Hochbeet battery last value
+        unit_of_measurement: '%'
+        value_template: '{{ value | round(1) }}'
+        group_function: last
+        where: '"entity_id" = ''hochbeet_battery'''
+        measurement: '"%"'
+        field: value
+        database: ha
+      - name: Jolokia Chili moisture last value
+        unit_of_measurement: '%'
+        value_template: '{{ value | round(1) }}'
+        group_function: last
+        where: '"entity_id" = ''jolokia_chili_moisture'''
+        measurement: '"%"'
+        field: value
+        database: ha
+      - name: Jolokia Chili temperature last value
+        unit_of_measurement: '°C'
+        value_template: '{{ value | round(1) }}'
+        group_function: last
+        where: '"entity_id" = ''jolokia_chili_temperature'''
+        measurement: '"°C"'
+        field: value
+        database: ha
+      - name: Jolokia Chili light intensity last value
+        unit_of_measurement: 'lx'
+        value_template: '{{ value | round(1) }}'
+        group_function: last
+        where: '"entity_id" = ''jolokia_chili_light_intensity'''
+        measurement: '"lx"'
+        field: value
+        database: ha
+      - name: Jolokia Chili conductivity last value
+        unit_of_measurement: 'µS'
+        value_template: '{{ value | round(1) }}'
+        group_function: last
+        where: '"entity_id" = ''jolokia_chili_conductivity'''
+        measurement: '"µS/cm"'
+        field: value
+        database: ha
+      - name: Jolokia Chili battery last value
+        unit_of_measurement: '%'
+        value_template: '{{ value | round(1) }}'
+        group_function: last
+        where: '"entity_id" = ''jolokia_chili_battery'''
+        measurement: '"%"'
+        field: value
+        database: ha
+
+plant:
+  Jolokia Chili Plant:
+    sensors:
+      moisture: sensor.jolokia_chili_moisture_last_value
+      battery: sensor.jolokia_chili_battery_last_value
+      temperature: sensor.jolokia_chili_temperature_last_value
+      conductivity: sensor.jolokia_chili_conductivity_last_value
+      brightness: sensor.jolokia_chili_light_intensity_last_value
+    min_moisture: 20
+    max_moisture: 60
+    min_battery: 17
+    min_conductivity: 500
+    min_temperature: 15
+  Hochbeet Epic Mega Plant:
+    sensors:
+      moisture: sensor.hochbeet_moisture_last_value
+      battery: sensor.hochbeet_battery_last_value
+      temperature: sensor.hochbeet_temperature_last_value
+      conductivity: sensor.hochbeet_conductivity_last_value
+      brightness: sensor.hochbeet_light_intensity_last_value
+    min_moisture: 20
+    max_moisture: 60
+    min_battery: 17
+    min_conductivity: 500
+    min_temperature: 15
+
 switch:
   - platform: mystrom
     host: 192.168.3.142
