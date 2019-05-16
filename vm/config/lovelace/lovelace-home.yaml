@@ -5,13 +5,16 @@ path: default_view
 badges:
   - sensor.yr_symbol
   - sun.sun
-  - sensor.netatmo_indoor_temperature
-  - sensor.netatmo_bedroom_temperature
+  - sensor.hochbeet_moisture
+  - sensor.karotten_moisture
+  - sensor.jolokia_chili_moisture
 cards:
   - type: plant-status
     entity: plant.hochbeet_epic_mega_plant
   - type: plant-status
     entity: plant.jolokia_chili_plant
+  - type: plant-status
+    entity: plant.karotten
   - title: Philips Funzeln
     type: entities
     show_header_toggle: true
