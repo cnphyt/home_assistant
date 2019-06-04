@@ -16,4 +16,12 @@ cards:
       - sensor.karotten_light_intensity
       - sensor.karotten_moisture
       - sensor.karotten_temperature
+      - sensor.lilien_conductivity
+      - sensor.lilien_light_intensity
+      - sensor.lilien_moisture
+      - sensor.lilien_temperature
+      - sensor.lavendel_conductivity
+      - sensor.lavendel_light_intensity
+      - sensor.lavendel_moisture
+      - sensor.lavendel_temperature
     type: history-graph
