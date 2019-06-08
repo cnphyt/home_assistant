@@ -24,4 +24,8 @@ cards:
       - sensor.lavendel_light_intensity
       - sensor.lavendel_moisture
       - sensor.lavendel_temperature
+      - sensor.zami_conductivity
+      - sensor.zami_light_intensity
+      - sensor.zami_moisture
+      - sensor.zami_temperature
     type: history-graph

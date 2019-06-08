@@ -19,6 +19,8 @@ cards:
     entity: plant.lilien
   - type: plant-status
     entity: plant.lavendel
+  - type: plant-status
+    entity: plant.zami
   - title: Philips Funzeln
     type: entities
     show_header_toggle: true
