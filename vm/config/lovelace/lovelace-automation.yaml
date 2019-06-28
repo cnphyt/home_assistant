@@ -8,6 +8,7 @@ cards:
       - entity: automation.licht_an_45min_vor_sonnenuntergang
       - entity: automation.unter_der_woche_morgens_licht_an
       - entity: automation.licht_aus_90min_nach_sonnenaufgang
+      - entity: automation.automatisch_blumen_giessen
   - title: Überwachungen
     type: entities
     entities:
