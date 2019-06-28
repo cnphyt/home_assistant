@@ -105,3 +105,45 @@
     service: frontend.set_theme
     data:
       name: darkgreen
+
+- alias: automatisch Blumen giessen
+  trigger:
+  - event: sunrise
+    offset: -02:00:00
+    platform: sun
+  condition:
+    condition: or
+    conditions:
+      - condition: numeric_state
+        entity_id: 'sensor.hochbeet2_moisture'
+        below: 30
+      - condition: numeric_state
+        entity_id: 'sensor.karotten_moisture'
+        below: 30
+      - condition: numeric_state
+        entity_id: 'sensor.jolokia_chili_moisture'
+        below: 30
+  action:
+  - service: notify.pushover_notification
+    data:
+      title: "automatisch Blumen gegossen"
+      message: |
+        Feuchtigkeit Pflanzen draussen (vor dem Giessen):
+        Hochbeet Kräuter:  {{ states.sensor.hochbeet2_moisture.state }} %
+        Hochbeet Karotten: {{ states.sensor.karotten_moisture.state }} %
+        Chilis:            {{ states.sensor.jolokia_chili_moisture.state }} %
+        Lavendel:          {{ states.sensor.lavendel_moisture.state }} %
+        Lilien:            {{ states.sensor.lilien_moisture.state }} %
+      data:
+        sound: pianobar
+        priority: 0
+  - service: switch.turn_off
+    entity_id: switch.strom_balkon
+  - delay:
+      minutes: 1
+  - service: switch.turn_on
+    entity_id: switch.strom_balkon
+  - delay:
+      minutes: 2
+  - service: switch.turn_off
+    entity_id: switch.strom_balkon
