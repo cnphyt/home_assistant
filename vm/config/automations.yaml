@@ -116,13 +116,13 @@
     conditions:
       - condition: numeric_state
         entity_id: 'sensor.hochbeet2_moisture'
-        below: 30
+        below: 20
       - condition: numeric_state
         entity_id: 'sensor.karotten_moisture'
-        below: 30
+        below: 20
       - condition: numeric_state
         entity_id: 'sensor.jolokia_chili_moisture'
-        below: 30
+        below: 20
   action:
   - service: notify.pushover_notification
     data:
