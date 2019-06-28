@@ -92,12 +92,6 @@ sensor:
     name: "Temperatur Wand WoZi rechts"
     unit_of_measurement: °C
     scan_interval: 180
-  - platform: rest
-    resource: http://192.168.3.211/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Wand Balkon"
-    unit_of_measurement: °C
-    scan_interval: 180
   - platform: influxdb
     host: !secret influxdb_host
     port: 8086
@@ -229,27 +223,27 @@ switch:
   - platform: mystrom
     host: 192.168.3.142
     name: Strom TV Rack
-    scan_interval: 10
+    scan_interval: 30
   - platform: mystrom
     host: 192.168.3.233
     name: Strom Büro Server
-    scan_interval: 10
+    scan_interval: 30
   - platform: mystrom
     host: 192.168.3.221
     name: Strom Büro Patrick
-    scan_interval: 10
+    scan_interval: 30
   - platform: mystrom
     host: 192.168.3.237
     name: Strom Küche
-    scan_interval: 10
+    scan_interval: 30
   - platform: mystrom
     host: 192.168.3.101
     name: Strom WoZi rechts
-    scan_interval: 10
+    scan_interval: 30
   - platform: mystrom
     host: 192.168.3.211
     name: Strom Balkon
-    scan_interval: 10
+    scan_interval: 30
 
 lametric:
   client_id:  !secret lametric_client_id
