@@ -1,0 +1,15 @@
+title: Homematic
+icon: 'mdi:home-automation'
+panel: false
+cards:
+  - title: Fenster
+    type: entities
+    entities:
+      - entity: binary_sensor.oeq1982192_state
+      - entity: binary_sensor.oeq1984662_state
+      - entity: binary_sensor.oeq1986380_state
+  - title: Türen
+    type: entities
+    entities:
+      - entity: binary_sensor.oeq0686091_state
+      - entity: binary_sensor.oeq1986334_state

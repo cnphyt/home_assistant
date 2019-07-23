@@ -3,3 +3,23 @@ light.hgrp_0000000030:
 
 light.hgrp_0000000014:
     hidden: true
+
+binary_sensor.oeq1982192_state:
+  friendly_name: Fenster Wohnzimmer
+  icon: mdi:window-maximize
+
+binary_sensor.oeq1984662_state:
+  friendly_name: Fenster Schlafzimmer West
+  icon: mdi:window-maximize
+
+binary_sensor.oeq1986380_state:
+  friendly_name: Fenster Schlafzimmer Nord
+  icon: mdi:window-maximize
+
+binary_sensor.oeq0686091_state:
+  friendly_name: Schiebetür Balkon
+  icon: mdi:glassdoor
+
+binary_sensor.oeq1986334_state:
+  friendly_name: Eingangstür
+  icon: mdi:glassdoor

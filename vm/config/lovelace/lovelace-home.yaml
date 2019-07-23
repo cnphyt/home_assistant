@@ -3,7 +3,6 @@ icon: 'mdi:home-assistant'
 panel: false
 path: default_view
 badges:
-  - sensor.yr_symbol
   - sun.sun
   - sensor.hochbeet2_moisture
   - sensor.karotten_moisture

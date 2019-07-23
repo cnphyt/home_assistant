@@ -2,6 +2,7 @@ title: Lemurenhöhle
 theme: darkgreen
 views:
   - !include /config/lovelace/lovelace-home.yaml
+  - !include /config/lovelace/lovelace-homematic.yaml
   - !include /config/lovelace/lovelace-netatmo.yaml
   - !include /config/lovelace/lovelace-automation.yaml
   - !include /config/lovelace/lovelace-media.yaml

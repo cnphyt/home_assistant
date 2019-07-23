@@ -28,6 +28,13 @@ netatmo:
   username: !secret netatmo_username
   password: !secret netatmo_password
 
+homematic:
+  interfaces:
+    rf:
+      host: 192.168.3.230
+      username: !secret homematic_ccu2_user
+      password: !secret homematic_ccu2_password
+
 influxdb:
   host: !secret influxdb_host
   port: 8086
