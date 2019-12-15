@@ -19,7 +19,6 @@ cards:
       - sensor.temperatur_wand_kuche
       - sensor.temperatur_wand_tv_rack
       - sensor.temperatur_wand_buro_patrick
-      - sensor.temperatur_wand_balkon
       - sensor.temperatur_wand_zami
       - sensor.netatmo_outdoor_temperature
       - sensor.netatmo_outdoor_humidity

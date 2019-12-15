@@ -5,15 +5,23 @@ light.hgrp_0000000014:
     hidden: true
 
 binary_sensor.oeq1982192_state:
-  friendly_name: Fenster Wohnzimmer
+  friendly_name: Wohnzimmer
+  icon: mdi:window-maximize
+
+binary_sensor.oeq1982179_state:
+  friendly_name: Buero
+  icon: mdi:window-maximize
+
+binary_sensor.oeq1987700_state:
+  friendly_name: Bad
   icon: mdi:window-maximize
 
 binary_sensor.oeq1984662_state:
-  friendly_name: Fenster Schlafzimmer West
+  friendly_name: Schlafzimmer West
   icon: mdi:window-maximize
 
 binary_sensor.oeq1986380_state:
-  friendly_name: Fenster Schlafzimmer Nord
+  friendly_name: Schlafzimmer Nord
   icon: mdi:window-maximize
 
 binary_sensor.oeq0686091_state:

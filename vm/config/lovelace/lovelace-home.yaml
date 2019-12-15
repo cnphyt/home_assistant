@@ -8,6 +8,32 @@ badges:
   - sensor.karotten_moisture
   - sensor.jolokia_chili_moisture
 cards:
+  - title: Philips Funzeln
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.wohnzimmer_links
+      - light.wohnzimmer_rechts
+      - light.zami
+      - light.sofa
+  - title: Strom
+    type: entities
+    entities:
+      - entity: switch.strom_tv_rack
+      - entity: switch.strom_buro_patrick
+      - entity: switch.strom_kuche
+      - entity: switch.strom_wozi_rechts
+      - entity: switch.strom_tannenbaum
+      - entity: switch.strom_jenny_desk
+  - title: Strom
+    type: history-graph
+    entities:
+      - entity: switch.strom_tv_rack
+      - entity: switch.strom_buro_patrick
+      - entity: switch.strom_kuche
+      - entity: switch.strom_wozi_rechts
+      - entity: switch.strom_tannenbaum
+      - entity: switch.strom_jenny_desk
   - type: plant-status
     entity: plant.hochbeet_epic_mega_plant
   - type: plant-status
@@ -20,27 +46,12 @@ cards:
     entity: plant.lavendel
   - type: plant-status
     entity: plant.zami
-  - title: Philips Funzeln
-    type: entities
-    show_header_toggle: true
-    entities:
-      - light.wohnzimmer_links
-      - light.wohnzimmer_rechts
-      - light.zami
-      - light.sofa
-  - title: Strom
-    type: history-graph
-    entities:
-      - entity: switch.strom_tv_rack
-      - entity: switch.strom_buro_patrick
-      - entity: switch.strom_kuche
-      - entity: switch.strom_wozi_rechts
-      - entity: switch.strom_balkon
   - title: Temperatur innen
     type: history-graph
     entities:
       - sensor.netatmo_indoor_temperature
       - sensor.netatmo_bedroom_temperature
+      - sensor.temperatur_schreibtisch_jenny
   - title: Temperatur aussen
     type: history-graph
     entities:

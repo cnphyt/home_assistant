@@ -8,6 +8,8 @@ cards:
       - entity: binary_sensor.oeq1982192_state
       - entity: binary_sensor.oeq1984662_state
       - entity: binary_sensor.oeq1986380_state
+      - entity: binary_sensor.oeq1982179_state
+      - entity: binary_sensor.oeq1987700_state
   - title: Türen
     type: entities
     entities:
