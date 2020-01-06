@@ -16,23 +16,20 @@ cards:
       - light.wohnzimmer_rechts
       - light.zami
       - light.sofa
+      - light.hue_color_light_1
   - title: Strom
     type: entities
     entities:
       - entity: switch.strom_tv_rack
       - entity: switch.strom_buro_patrick
-      - entity: switch.strom_kuche
       - entity: switch.strom_wozi_rechts
-      - entity: switch.strom_tannenbaum
       - entity: switch.strom_jenny_desk
   - title: Strom
     type: history-graph
     entities:
       - entity: switch.strom_tv_rack
       - entity: switch.strom_buro_patrick
-      - entity: switch.strom_kuche
       - entity: switch.strom_wozi_rechts
-      - entity: switch.strom_tannenbaum
       - entity: switch.strom_jenny_desk
   - type: plant-status
     entity: plant.hochbeet_epic_mega_plant

@@ -25,14 +25,14 @@
   - service: switch.turn_off
     entity_id: switch.strom_tannenbaum
 
-- alias: Baum aus um 10
-  trigger:
-    platform: time
-    at: '22:00:00'
-  condition: []
-  action:
-  - service: switch.turn_off
-    entity_id: switch.strom_tannenbaum
+#- alias: Baum aus um 10
+#  trigger:
+#    platform: time
+#    at: '22:00:00'
+#  condition: []
+#  action:
+#  - service: switch.turn_off
+#    entity_id: switch.strom_tannenbaum
 
 - alias: Unter der Woche, morgens Licht an
   trigger:
@@ -52,8 +52,8 @@
       data:
         brightness: 255
         color_name: lightcyan
-    - service: switch.turn_on
-      entity_id: switch.strom_tannenbaum
+#    - service: switch.turn_on
+#      entity_id: switch.strom_tannenbaum
 
 - alias: Push Nachricht wenn Hochbeet über 25 Grad
   trigger:

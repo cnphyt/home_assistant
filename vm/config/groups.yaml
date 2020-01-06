@@ -5,6 +5,8 @@ licht_philips:
     - light.wohnzimmer_rechts
     - light.zami
     - light.sofa
+    - light.sofa
+    - light.hue_color_light_1
 
 sound_sonos:
   name: Sonos b00m
