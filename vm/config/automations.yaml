@@ -10,8 +10,8 @@
       data:
         brightness: 200
         color_name: sandybrown
-    - service: switch.turn_on
-      entity_id: switch.strom_tannenbaum
+#    - service: switch.turn_on
+#      entity_id: switch.strom_tannenbaum
 
 - alias: Licht aus 90min nach Sonnenaufgang
   trigger:
@@ -22,8 +22,8 @@
   action:
   - service: light.turn_off
     entity_id: group.licht_philips
-  - service: switch.turn_off
-    entity_id: switch.strom_tannenbaum
+#  - service: switch.turn_off
+#    entity_id: switch.strom_tannenbaum
 
 #- alias: Baum aus um 10
 #  trigger:
@@ -37,7 +37,7 @@
 - alias: Unter der Woche, morgens Licht an
   trigger:
     platform: time
-    at: '05:30:00'
+    at: '06:00:00'
   condition:
     condition: time
     weekday:
