@@ -1,21 +1,20 @@
 licht_philips:
   name: Philips Funzeln
   entities:
-    - light.wohnzimmer_links
-    - light.wohnzimmer_rechts
-    - light.zami
-    - light.sofa
-    - light.sofa
-    - light.hue_color_light_1
+    - light.living_room
+
+licht_wohnzimmer:
+  name: Philips Funzeln
+  entities:
+    - light.living_room
 
 sound_sonos:
   name: Sonos b00m
   entities:
     - media_player.bathroom
-    - media_player.bedroom
-    - media_player.connect_via_avr
+    - media_player.jenny
     - media_player.kitchen
-    - media_player.office
+    - media_player.patrick
     - media_player.playbar_tv
 
 netatmo_sensors:
