@@ -68,6 +68,15 @@ mqtt:
 #  themes: !include themes.yaml
 
 person: !include people.yaml
+
+#sensor:
+#  - platform: rest
+#    resource: http://192.168.3.139/status
+#    value_template: "{{ value_json.tmp.tC }}"
+#    name: "Temperatur Zimmer Patrick"
+#    unit_of_measurement: °C
+#    scan_interval: 900
+
 #sensor:
 #  - platform: rest
 #    resource: http://192.168.3.142/report

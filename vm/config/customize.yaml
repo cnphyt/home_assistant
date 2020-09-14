@@ -9,7 +9,7 @@ binary_sensor.oeq1982192_state:
   icon: mdi:window-maximize
 
 binary_sensor.oeq1982179_state:
-  friendly_name: Buero
+  friendly_name: Zimmer Patrick
   icon: mdi:window-maximize
 
 binary_sensor.oeq1987700_state:
@@ -17,11 +17,11 @@ binary_sensor.oeq1987700_state:
   icon: mdi:window-maximize
 
 binary_sensor.oeq1984662_state:
-  friendly_name: Schlafzimmer West
+  friendly_name: Zimmer Jenny
   icon: mdi:window-maximize
 
 binary_sensor.oeq1986380_state:
-  friendly_name: Schlafzimmer Nord
+  friendly_name: Schlafzimmer
   icon: mdi:window-maximize
 
 binary_sensor.oeq0686091_state:
