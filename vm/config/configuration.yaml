@@ -35,11 +35,11 @@ homematic:
       username: !secret homematic_ccu2_user
       password: !secret homematic_ccu2_password
 
-influxdb:
-  host: !secret influxdb_host
-  port: 8086
-  database: ha
-  default_measurement: state
+#influxdb:
+#  host: !secret influxdb_host
+#  port: 8086
+#  database: ha
+#  default_measurement: state
 
 notify:
   - name: pushover_notification
@@ -53,13 +53,13 @@ notify:
     cycles: 3
     priority: info
 
-device_tracker:
-  - platform: nmap_tracker
-    hosts:
-      - 192.168.3.246
-      - 192.168.3.127
-    interval_seconds: 30
-    consider_home: 7
+#device_tracker:
+#  - platform: nmap_tracker
+#    hosts:
+#      - 192.168.3.246
+#      - 192.168.3.127
+#    interval_seconds: 30
+#    consider_home: 7
 
 mqtt:
   broker: 192.168.3.51
@@ -68,49 +68,49 @@ mqtt:
 #  themes: !include themes.yaml
 
 person: !include people.yaml
-sensor:
-  - platform: rest
-    resource: http://192.168.3.142/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Wand TV Rack"
-    unit_of_measurement: °C
-    scan_interval: 180
-  - platform: rest
-    resource: http://192.168.3.233/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Wand Büro Server"
-    unit_of_measurement: °C
-    scan_interval: 180
-  - platform: rest
-    resource: http://192.168.3.221/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Wand Büro Patrick"
-    unit_of_measurement: °C
-    scan_interval: 180
-  - platform: rest
-    resource: http://192.168.3.237/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Wand Küche"
-    unit_of_measurement: °C
-    scan_interval: 180
-  - platform: rest
-    resource: http://192.168.3.101/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Wand WoZi rechts"
-    unit_of_measurement: °C
-    scan_interval: 180
-  - platform: rest
-    resource: http://192.168.3.238/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Schreibtisch Jenny"
-    unit_of_measurement: °C
-    scan_interval: 180
-  - platform: rest
-    resource: http://192.168.3.211/report
-    value_template: "{{ value_json.temperature | round(1) }}"
-    name: "Temperatur Tannenbaum"
-    unit_of_measurement: °C
-    scan_interval: 180
+#sensor:
+#  - platform: rest
+#    resource: http://192.168.3.142/report
+#    value_template: "{{ value_json.temperature | round(1) }}"
+#    name: "Temperatur Wand TV Rack"
+#    unit_of_measurement: °C
+#    scan_interval: 180
+#  - platform: rest
+#    resource: http://192.168.3.233/report
+#    value_template: "{{ value_json.temperature | round(1) }}"
+#    name: "Temperatur Wand Büro Server"
+#    unit_of_measurement: °C
+#    scan_interval: 180
+#  - platform: rest
+#    resource: http://192.168.3.221/report
+#    value_template: "{{ value_json.temperature | round(1) }}"
+#    name: "Temperatur Wand Büro Patrick"
+#    unit_of_measurement: °C
+#    scan_interval: 180
+#  - platform: rest
+#    resource: http://192.168.3.237/report
+#    value_template: "{{ value_json.temperature | round(1) }}"
+#    name: "Temperatur Wand Küche"
+#    unit_of_measurement: °C
+#    scan_interval: 180
+#  - platform: rest
+#    resource: http://192.168.3.101/report
+#    value_template: "{{ value_json.temperature | round(1) }}"
+#    name: "Temperatur Wand WoZi rechts"
+#    unit_of_measurement: °C
+#    scan_interval: 180
+#  - platform: rest
+#    resource: http://192.168.3.238/report
+#    value_template: "{{ value_json.temperature | round(1) }}"
+#    name: "Temperatur Schreibtisch Jenny"
+#    unit_of_measurement: °C
+#    scan_interval: 180
+#  - platform: rest
+#    resource: http://192.168.3.211/report
+#    value_template: "{{ value_json.temperature | round(1) }}"
+#    name: "Temperatur Tannenbaum"
+#    unit_of_measurement: °C
+#    scan_interval: 180
 #  - platform: influxdb
 #    host: !secret influxdb_host
 #    port: 8086
@@ -237,35 +237,35 @@ sensor:
 #    scan_interval: 3600
 #    median: 3
 
-switch:
-  - platform: mystrom
-    host: 192.168.3.142
-    name: Strom TV Rack
-    scan_interval: 30
-  - platform: mystrom
-    host: 192.168.3.233
-    name: Strom Büro Server
-    scan_interval: 30
-  - platform: mystrom
-    host: 192.168.3.221
-    name: Strom Büro Patrick
-    scan_interval: 30
-  - platform: mystrom
-    host: 192.168.3.237
-    name: Strom Küche
-    scan_interval: 30
-  - platform: mystrom
-    host: 192.168.3.101
-    name: Strom WoZi rechts
-    scan_interval: 30
-  - platform: mystrom
-    host: 192.168.3.211
-    name: Strom Tannenbaum
-    scan_interval: 30
-  - platform: mystrom
-    host: 192.168.3.238
-    name: Strom Jenny Desk
-    scan_interval: 30
+#switch:
+#  - platform: mystrom
+#    host: 192.168.3.142
+#    name: Strom TV Rack
+#    scan_interval: 30
+#  - platform: mystrom
+#    host: 192.168.3.233
+#    name: Strom Büro Server
+#    scan_interval: 30
+#  - platform: mystrom
+#    host: 192.168.3.221
+#    name: Strom Büro Patrick
+#    scan_interval: 30
+#  - platform: mystrom
+#    host: 192.168.3.237
+#    name: Strom Küche
+#    scan_interval: 30
+#  - platform: mystrom
+#    host: 192.168.3.101
+#    name: Strom WoZi rechts
+#    scan_interval: 30
+#  - platform: mystrom
+#    host: 192.168.3.211
+#    name: Strom Tannenbaum
+#    scan_interval: 30
+#  - platform: mystrom
+#    host: 192.168.3.238
+#    name: Strom Jenny Desk
+#    scan_interval: 30
 
 lametric:
   client_id:  !secret lametric_client_id
