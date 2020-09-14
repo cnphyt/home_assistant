@@ -4,12 +4,9 @@ badges: []
 cards:
   - entities:
       - media_player.bathroom
-      - media_player.bedroom
-      - media_player.connect_via_avr
+      - media_player.jenny
       - media_player.kitchen
-      - media_player.office
+      - media_player.patrick
       - media_player.playbar_tv
-      - media_player.samsung_6_series_65_ue65ku6400
-      - media_player.krawallwumpe
     type: entities
     title: Sound
