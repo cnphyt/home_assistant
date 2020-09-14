@@ -6,7 +6,7 @@
   condition: []
   action:
     - service: light.turn_on
-      entity_id: group.licht_philips
+      entity_id: light.living_room
       data:
         brightness: 200
         color_name: sandybrown
@@ -162,3 +162,11 @@
       minutes: 2
   - service: switch.turn_off
     entity_id: switch.strom_tannenbaum
+
+- alias: Sonos Bad Play/Pause Toggle
+  trigger:
+    platform: webhook
+    webhook_id: sonos_bathroom_toggle
+  action:
+    - service: media_player.media_play_pause
+      entity_id: media_player.bathroom
