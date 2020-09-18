@@ -1,9 +1,9 @@
-- name: Patrick (Tracker)
-  id: patrick_tracker
+- name: Patrick
+  id: patrick_mobile
   device_trackers:
-    - device_tracker.hm20pro_home
+    - device_tracker.patrick_mate20_pro
 
-- name: Jenny (Tracker)
-  id: jenny_tracker
+- name: Jenny
+  id: jenny_mobile
   device_trackers:
-    - device_tracker.gs10_home
+    - device_tracker.jenny_s20

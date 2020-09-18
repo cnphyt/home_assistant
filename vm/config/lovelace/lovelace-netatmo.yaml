@@ -2,24 +2,19 @@ icon: 'mdi:thermometer'
 panel: true
 title: Klima
 badges:
-  - sensor.netatmo_indoor_temperature
-  - sensor.netatmo_indoor_humidity
-  - sensor.netatmo_indoor_co2
+  - sensor.netatmo_wetterarsch_temperature
+  - sensor.netatmo_wetterarsch_humidity
+  - sensor.netatmo_wetterarsch_co2
 cards:
   - entities:
-      - sensor.netatmo_indoor_temperature
-      - sensor.netatmo_indoor_humidity
-      - sensor.netatmo_indoor_co2
-      - sensor.netatmo_indoor_noise
-      - sensor.netatmo_indoor_pressure
-      - sensor.netatmo_bedroom_co2
-      - sensor.netatmo_bedroom_humidity
-      - sensor.netatmo_bedroom_temperature
-      - sensor.temperatur_wand_wozi_rechts
-      - sensor.temperatur_wand_kuche
-      - sensor.temperatur_wand_tv_rack
-      - sensor.temperatur_wand_buro_patrick
-      - sensor.temperatur_wand_zami
-      - sensor.netatmo_outdoor_temperature
-      - sensor.netatmo_outdoor_humidity
+      - sensor.netatmo_wetterarsch_temperature
+      - sensor.netatmo_wetterarsch_humidity
+      - sensor.netatmo_wetterarsch_co2
+      - sensor.netatmo_wetterarsch_noise
+      - sensor.netatmo_wetterarsch_pressure
+      - sensor.netatmo_wetterarsch_bedroom_co2
+      - sensor.netatmo_wetterarsch_bedroom_humidity
+      - sensor.netatmo_wetterarsch_bedroom_temperature
+      - sensor.netatmo_wetterarsch_outdoor_temperature
+      - sensor.netatmo_wetterarsch_outdoor_humidity
     type: history-graph

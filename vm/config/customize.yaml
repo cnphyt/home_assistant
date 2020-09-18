@@ -26,11 +26,11 @@ binary_sensor.oeq1986380_state:
 
 binary_sensor.oeq0686091_state:
   friendly_name: Schiebetür Balkon
-  icon: mdi:glassdoor
+  icon: mdi:door
 
 binary_sensor.oeq1986334_state:
   friendly_name: Eingangstür
-  icon: mdi:glassdoor
+  icon: mdi:door
 
 light.hue_color_light_1:
   friendly_name: Le Stripe

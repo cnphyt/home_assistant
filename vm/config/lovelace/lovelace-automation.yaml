@@ -8,15 +8,15 @@ cards:
       - entity: automation.licht_an_45min_vor_sonnenuntergang
       - entity: automation.unter_der_woche_morgens_licht_an
       - entity: automation.licht_aus_90min_nach_sonnenaufgang
-      - entity: automation.automatisch_blumen_giessen
+#      - entity: automation.automatisch_blumen_giessen
 #      - entity: automation.baum_aus_um_10
-  - title: Überwachungen
-    type: entities
-    entities:
-      - entity: automation.push_nachricht_wenn_hochbeet_uber_25_grad
-      - entity: automation.push_nachricht_an_patrick_wenn_zuhause_und_beet_zu_trocken_war
+#  - title: Überwachungen
+#    type: entities
+#    entities:
+#      - entity: automation.push_nachricht_wenn_hochbeet_uber_25_grad
+#      - entity: automation.push_nachricht_an_patrick_wenn_zuhause_und_beet_zu_trocken_war
   - title: People
     type: entities
     entities:
-      - entity: person.patrick_tracker
-      - entity: person.jenny_tracker
+      - entity: person.patrick_tracker_2
+      - entity: person.jenny_tracker_2
