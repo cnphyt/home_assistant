@@ -1,20 +1,83 @@
 icon: 'mdi:thermometer'
-panel: true
+panel: false
 title: Klima
 badges:
   - sensor.netatmo_wetterarsch_temperature
   - sensor.netatmo_wetterarsch_humidity
   - sensor.netatmo_wetterarsch_co2
 cards:
-  - entities:
-      - sensor.netatmo_wetterarsch_temperature
-      - sensor.netatmo_wetterarsch_humidity
-      - sensor.netatmo_wetterarsch_co2
-      - sensor.netatmo_wetterarsch_noise
-      - sensor.netatmo_wetterarsch_pressure
-      - sensor.netatmo_wetterarsch_bedroom_co2
-      - sensor.netatmo_wetterarsch_bedroom_humidity
-      - sensor.netatmo_wetterarsch_bedroom_temperature
-      - sensor.netatmo_wetterarsch_outdoor_temperature
-      - sensor.netatmo_wetterarsch_outdoor_humidity
-    type: history-graph
+  - type: markdown
+    content: |
+      Hallo, {{ user }}
+  - title: Wohnzimmer Temperatur
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_temperature
+    graph: line
+    detail: 2
+    unit: °C
+    icon: 'mdi:thermometer'
+  - title: Wohnzimmer Luftfeuchtigkeit
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_humidity
+    graph: line
+    detail: 2
+    unit: "%"
+    icon: 'mdi:thermometer'
+  - title: Wohnzimmer CO2
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_co2
+    graph: line
+    detail: 2
+    unit: ppm
+    icon: 'mdi:thermometer'
+  - title: Wohnzimmer Lärm
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_noise
+    graph: line
+    detail: 2
+    unit: dB
+    icon: 'mdi:thermometer'
+  - title: Wohnzimmer Luftdruck
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_pressure
+    graph: line
+    detail: 2
+    unit: mbar
+    icon: 'mdi:thermometer'
+
+  - title: Schlafzimmer
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_bedroom_temperature
+    graph: line
+    detail: 2
+    unit: °C
+    icon: 'mdi:thermometer'
+  - title: Schlafzimmer CO2
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_bedroom_co2
+    graph: line
+    detail: 2
+    unit: ppm
+    icon: 'mdi:thermometer'
+  - title: Wohnzimmer Luftfeuchtigkeit
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_bedroom_humidity
+    graph: line
+    detail: 2
+    unit: "%"
+    icon: 'mdi:thermometer'
+
+  - title: Balkon
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_outdoor_temperature
+    graph: line
+    detail: 2
+    unit: °C
+    icon: 'mdi:thermometer'
+  - title: Balkon Luftfeuchtigkeit
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_outdoor_humidity
+    graph: line
+    detail: 2
+    unit: "%"
+    icon: 'mdi:thermometer'

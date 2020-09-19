@@ -43,18 +43,64 @@ cards:
 #    entity: plant.lavendel
 #  - type: plant-status
 #    entity: plant.zami
-  - title: Temperatur innen
-    type: history-graph
+  - title: Fenster
+    show_header_toggle: false
+    type: entities
     entities:
-      - sensor.netatmo_wetterarsch_temperature
-      - sensor.netatmo_wetterarsch_bedroom_temperature
-      - sensor.temperatur_schreibtisch_jenny
-  - title: Temperatur aussen
-    type: history-graph
+      - entity: binary_sensor.oeq1987700_state
+      - entity: binary_sensor.oeq1986380_state
+      - entity: binary_sensor.oeq1982179_state
+      - entity: binary_sensor.oeq1984662_state
+      - entity: binary_sensor.oeq1982192_state
+  - title: Türen
+    show_header_toggle: false
+    type: entities
     entities:
-      - sensor.netatmo_wetterarsch_outdoor_temperature
-      - sensor.hochbeet_temperature_last_value
+      - entity: binary_sensor.oeq0686091_state
+      - entity: binary_sensor.oeq1986334_state
+#  - title: Türen/Fenster
+#    type: glance
+#    entities:
+#      - entity: binary_sensor.oeq1987700_state
+#        name: Fenster Bad
+#      - entity: binary_sensor.oeq1986380_state
+#        name: Fenster SZ
+#      - entity: binary_sensor.oeq1982179_state
+#        name: Fenster P
+#      - entity: binary_sensor.oeq1984662_state
+#        name: Fenster J
+#      - entity: binary_sensor.oeq1982192_state
+#        name: Fenster WZ
+#      - entity: binary_sensor.oeq0686091_state
+#        name: Eingangstür
+#      - entity: binary_sensor.oeq1986334_state
+#        name: Balkontür
+#      - entity: switch.wall_plug_switch
+#        tap_action:
+#          action: toggle
+  - title: Wohnzimmer
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_temperature
+    graph: line
+    detail: 2
+    unit: °C
+    icon: 'mdi:thermometer'
+  - title: Schlafzimmer
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_temperature
+    graph: line
+    detail: 2
+    unit: °C
+    icon: 'mdi:thermometer'
+  - title: Balkon
+    type: sensor
+    entity: sensor.netatmo_wetterarsch_outdoor_temperature
+    graph: line
+    detail: 2
+    unit: °C
+    icon: 'mdi:thermometer'
   - title: People
+    show_header_toggle: false
     type: entities
     entities:
       - entity: person.patrick_tracker_2
