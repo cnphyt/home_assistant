@@ -170,3 +170,11 @@
   action:
     - service: media_player.media_play_pause
       entity_id: media_player.bathroom
+
+- alias: Sonos Bad Pause
+  trigger:
+    platform: webhook
+    webhook_id: sonos_bathroom_pause
+  action:
+    - service: media_player.media_pause
+      entity_id: media_player.bathroom
