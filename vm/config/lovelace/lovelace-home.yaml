@@ -8,7 +8,7 @@ badges:
 #  - sensor.karotten_moisture
 #  - sensor.jolokia_chili_moisture
 cards:
-  - title: Philips Funzeln
+  - title: Lampen
     type: entities
     show_header_toggle: true
     entities:
@@ -17,6 +17,10 @@ cards:
       - light.zami
       - light.sofa
       - light.hue_color_light_1
+      - switch.strom_schlafzimmer
+  - title: Spanner im Keller
+    type: picture
+    image: "http://nas.home:9999/latest.jpg"
 #  - title: Strom
 #    type: entities
 #    entities:

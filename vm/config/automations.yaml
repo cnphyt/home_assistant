@@ -25,14 +25,31 @@
 #  - service: switch.turn_off
 #    entity_id: switch.strom_tannenbaum
 
-#- alias: Baum aus um 10
-#  trigger:
-#    platform: time
-#    at: '22:00:00'
-#  condition: []
-#  action:
-#  - service: switch.turn_off
-#    entity_id: switch.strom_tannenbaum
+- alias: Schlafzimmer Licht an
+  trigger:
+    platform: time
+    at: '18:00:00'
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: 'person.patrick_tracker_2'
+        state: 'home'
+      - condition: state
+        entity_id: 'person.jenny_tracker_2'
+        state: 'home'
+  action:
+  - service: switch.turn_on
+    entity_id: switch.strom_schlafzimmer
+
+
+- alias: Schlafzimmer Licht aus
+  trigger:
+    platform: time
+    at: '21:00:00'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.strom_schlafzimmer
 
 - alias: Unter der Woche, morgens Licht an
   trigger:
