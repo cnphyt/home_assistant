@@ -4,49 +4,38 @@ panel: false
 path: default_view
 badges:
   - sun.sun
-#  - sensor.hochbeet2_moisture
-#  - sensor.karotten_moisture
-#  - sensor.jolokia_chili_moisture
 cards:
-  - title: Lampen
+  - title: Wohnzimmer
     type: entities
     show_header_toggle: true
     entities:
-      - light.wohnzimmer_links
-      - light.wohnzimmer_rechts
-      - light.zami
-      - light.sofa
-      - light.hue_color_light_1
+      - light.tvlinks
+      - light.tvrechts
+      - switch.strom_wohnzimmer
+  - title: Essbereich
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.esstisch
+  - title: Schlafzimmer
+    type: entities
+    show_header_toggle: true
+    entities:
       - switch.strom_schlafzimmer
+  - title: Patrick
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.stripe
+  - title: Jenny
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.jenny1
+      - light.jenny2
   - title: Spanner im Keller
     type: picture
-    image: "http://nas.home:9999/latest.jpg"
-#  - title: Strom
-#    type: entities
-#    entities:
-#      - entity: switch.strom_tv_rack
-#      - entity: switch.strom_buro_patrick
-#      - entity: switch.strom_wozi_rechts
-#      - entity: switch.strom_jenny_desk
-#  - title: Strom
-#    type: history-graph
-#    entities:
-#      - entity: switch.strom_tv_rack
-#      - entity: switch.strom_buro_patrick
-#      - entity: switch.strom_wozi_rechts
-#      - entity: switch.strom_jenny_desk
-#  - type: plant-status
-#    entity: plant.hochbeet_epic_mega_plant
-#  - type: plant-status
-#    entity: plant.jolokia_chili_plant
-#  - type: plant-status
-#    entity: plant.karotten
-#  - type: plant-status
-#    entity: plant.lilien
-#  - type: plant-status
-#    entity: plant.lavendel
-#  - type: plant-status
-#    entity: plant.zami
+    image: "http://nas.pjhome:9999/latest.jpg"
   - title: Fenster
     show_header_toggle: false
     type: entities
@@ -62,26 +51,6 @@ cards:
     entities:
       - entity: binary_sensor.oeq0686091_state
       - entity: binary_sensor.oeq1986334_state
-#  - title: Türen/Fenster
-#    type: glance
-#    entities:
-#      - entity: binary_sensor.oeq1987700_state
-#        name: Fenster Bad
-#      - entity: binary_sensor.oeq1986380_state
-#        name: Fenster SZ
-#      - entity: binary_sensor.oeq1982179_state
-#        name: Fenster P
-#      - entity: binary_sensor.oeq1984662_state
-#        name: Fenster J
-#      - entity: binary_sensor.oeq1982192_state
-#        name: Fenster WZ
-#      - entity: binary_sensor.oeq0686091_state
-#        name: Eingangstür
-#      - entity: binary_sensor.oeq1986334_state
-#        name: Balkontür
-#      - entity: switch.wall_plug_switch
-#        tap_action:
-#          action: toggle
   - title: Wohnzimmer
     type: sensor
     entity: sensor.netatmo_wetterarsch_temperature
@@ -91,7 +60,7 @@ cards:
     icon: 'mdi:thermometer'
   - title: Schlafzimmer
     type: sensor
-    entity: sensor.netatmo_wetterarsch_temperature
+    entity: sensor.netatmo_wetterarsch_bedroom_temperature
     graph: line
     detail: 2
     unit: °C

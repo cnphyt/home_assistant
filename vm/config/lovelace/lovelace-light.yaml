@@ -2,9 +2,31 @@ icon: 'mdi-ceiling-light'
 title: Licht
 badges: []
 cards:
-  - entities:
-      - light.sofa
-      - light.wohnzimmer_links
-      - light.wohnzimmer_rechts
-      - light.zami
-    type: light
+  - title: Wohnzimmer
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.tvlinks
+      - light.tvrechts
+      - switch.strom_wohnzimmer
+  - title: Essbereich
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.esstisch
+  - title: Schlafzimmer
+    type: entities
+    show_header_toggle: true
+    entities:
+      - switch.strom_schlafzimmer
+  - title: Patrick
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.stripe
+  - title: Jenny
+    type: entities
+    show_header_toggle: true
+    entities:
+      - light.jenny1
+      - light.jenny2

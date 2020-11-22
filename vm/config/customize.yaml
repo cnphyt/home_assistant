@@ -32,5 +32,5 @@ binary_sensor.oeq1986334_state:
   friendly_name: Eingangstür
   icon: mdi:door
 
-light.hue_color_light_1:
+light.stripe:
   friendly_name: Le Stripe

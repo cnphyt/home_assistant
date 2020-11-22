@@ -1,10 +1,5 @@
 licht_philips:
-  name: Philips Funzeln
-  entities:
-    - light.living_room
-
-licht_wohnzimmer:
-  name: Philips Funzeln
+  name: Hue Wohnzimmer
   entities:
     - light.living_room
 
@@ -26,6 +21,9 @@ netatmo_sensors:
     - sensor.netatmo_wetterarsch_noise
     - sensor.netatmo_wetterarsch_pressure
     - sensor.netatmo_wetterarsch_wifi
+    - sensor.netatmo_wetterarsch_bedroom_temperature
+    - sensor.netatmo_wetterarsch_bedroom_humidity
+    - sensor..netatmo_wetterarsch_bedroom_co2
     - sensor.netatmo_wetterarsch_outdoor_temperature
     - sensor.netatmo_wetterarsch_outdoor_humidity
     - sensor.netatmo_wetterarsch_outdoor_battery_percent
