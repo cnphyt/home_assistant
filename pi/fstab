@@ -1,0 +1,6 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=e9dee02f-01  /boot           vfat    defaults          0       2
+PARTUUID=e9dee02f-02  /               ext4    defaults,noatime  0       1
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+nas.home:/volume2/camera_incoming /mnt/camera_incoming  nfs      defaults    0       0
