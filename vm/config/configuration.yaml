@@ -30,11 +30,8 @@ homematic:
       username: !secret homematic_ccu2_user
       password: !secret homematic_ccu2_password
 
-#influxdb:
-#  host: !secret influxdb_host
-#  port: 8086
-#  database: ha
-#  default_measurement: state
+logger:
+  default: info
 
 notify:
   - name: pushover_notification
@@ -52,12 +49,16 @@ person: !include people.yaml
 
 switch:
   - platform: mystrom
-    host: 192.168.3.101
-    name: Strom Wohnzimmer
-    scan_interval: 30
-  - platform: mystrom
     host: 192.168.3.211
     name: Strom Schlafzimmer
+    scan_interval: 30
+  - platform: mystrom
+    host: 192.168.3.221
+    name: Strom Patrick
+    scan_interval: 30
+  - platform: mystrom
+    host: 192.168.3.142
+    name: Strom Wohnzimmer
     scan_interval: 30
 
 lametric:

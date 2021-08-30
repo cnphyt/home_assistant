@@ -8,7 +8,6 @@ cards:
     entities:
       - light.tvlinks
       - light.tvrechts
-      - switch.strom_wohnzimmer
   - title: Essbereich
     type: entities
     show_header_toggle: true

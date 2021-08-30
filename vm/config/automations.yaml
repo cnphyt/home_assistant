@@ -14,12 +14,10 @@
         state: 'home'
   action:
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: group.licht_philips
       data:
         brightness: 200
         color_name: sandybrown
-    - service: switch.turn_on
-      entity_id: switch.strom_wohnzimmer
 
 - alias: Licht aus 90min nach Sonnenaufgang
   trigger:
@@ -29,9 +27,7 @@
   condition: []
   action:
   - service: light.turn_off
-    entity_id: light.living_room
-  - service: switch.turn_off
-    entity_id: switch.strom_wohnzimmer
+    entity_id: group.licht_philips
 
 - alias: Schlafzimmer Licht an
   trigger:
@@ -73,12 +69,10 @@
       - fri
   action:
     - service: light.turn_on
-      entity_id: light.living_room
+      entity_id: group.licht_philips
       data:
         brightness: 255
         color_name: lightcyan
-    - service: switch.turn_on
-      entity_id: switch.strom_wohnzimmer
 
 - alias: Sonos Bad Play/Pause Toggle
   trigger:
@@ -95,3 +89,33 @@
   action:
     - service: media_player.media_pause
       entity_id: media_player.bathroom
+
+
+- alias: Chili Licht an
+  trigger:
+    platform: time
+    at: '06:00:00'
+  condition: []
+  action:
+  - service: switch.turn_on
+    entity_id: switch.strom_patrick
+
+- alias: Chili Licht aus
+  trigger:
+    platform: time
+    at: '21:00:00'
+  condition: []
+  action:
+  - service: switch.turn_off
+    entity_id: switch.strom_patrick
+
+- alias: Wohnzimmer Netatmo reset
+  trigger:
+    platform: time
+    at: '23:00:00'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.strom_wohnzimmer_2
+    - delay: 0:30
+    - service: switch.turn_on
+      entity_id: switch.strom_wohnzimmer_2

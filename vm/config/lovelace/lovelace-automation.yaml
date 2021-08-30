@@ -10,6 +10,8 @@ cards:
       - entity: automation.licht_aus_90min_nach_sonnenaufgang
       - entity: automation.schlafzimmer_licht_an
       - entity: automation.schlafzimmer_licht_aus
+      - entity: automation.chili_licht_an
+      - entity: automation.chili_licht_aus
   - title: People
     type: entities
     entities:

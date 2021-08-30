@@ -1,7 +1,15 @@
 licht_philips:
   name: Hue Wohnzimmer
   entities:
-    - light.living_room
+    - light.tv_links
+    - light.tv_rechts
+
+licht_esstisch:
+  name: Licht Esstisch
+  entities:
+    - light.esstisch_vorne
+    - light.esstisch_mitte
+    - light.esstisch_hinten
 
 sound_sonos:
   name: Sonos b00m
@@ -23,7 +31,7 @@ netatmo_sensors:
     - sensor.netatmo_wetterarsch_wifi
     - sensor.netatmo_wetterarsch_bedroom_temperature
     - sensor.netatmo_wetterarsch_bedroom_humidity
-    - sensor..netatmo_wetterarsch_bedroom_co2
+    - sensor.netatmo_wetterarsch_bedroom_co2
     - sensor.netatmo_wetterarsch_outdoor_temperature
     - sensor.netatmo_wetterarsch_outdoor_humidity
     - sensor.netatmo_wetterarsch_outdoor_battery_percent

@@ -9,14 +9,14 @@ cards:
     type: entities
     show_header_toggle: true
     entities:
-      - light.tvlinks
-      - light.tvrechts
-      - switch.strom_wohnzimmer
+      - group.licht_philips
+      - switch.strom_wohnzimmer_2
   - title: Essbereich
     type: entities
     show_header_toggle: true
     entities:
-      - light.esstisch
+      - group.licht_esstisch
+      - light.stripe_kueche
   - title: Schlafzimmer
     type: entities
     show_header_toggle: true
@@ -26,13 +26,8 @@ cards:
     type: entities
     show_header_toggle: true
     entities:
-      - light.stripe
-  - title: Jenny
-    type: entities
-    show_header_toggle: true
-    entities:
-      - light.jenny1
-      - light.jenny2
+      - light.le_stripe
+      - switch.strom_patrick
   - title: Spanner im Keller
     type: picture
     image: "http://nas.pjhome:9999/latest.jpg"

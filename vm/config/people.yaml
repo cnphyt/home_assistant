@@ -1,9 +1,9 @@
 - name: Patrick
   id: patrick_mobile
   device_trackers:
-    - device_tracker.patrick_mate20_pro
+    - device_tracker.iphone_2
 
 - name: Jenny
   id: jenny_mobile
   device_trackers:
-    - device_tracker.jenny_s20
+    - device_tracker.galaxy_s21_ultra_5g
