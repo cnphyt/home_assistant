@@ -28,6 +28,8 @@ cards:
     entities:
       - light.le_stripe
       - switch.strom_patrick
+      - switch.00101be9935eef
+      - switch.00101be9935f81
   - title: Spanner im Keller
     type: picture
     image: "http://nas.pjhome:9999/latest.jpg"

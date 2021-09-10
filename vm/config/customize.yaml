@@ -34,3 +34,41 @@ binary_sensor.oeq1986334_state:
 
 light.stripe:
   friendly_name: Le Stripe
+
+# Patrick Desk
+switch.00101be9935f81:
+  friendly_name: Patrick Desk Steckdose
+sensor.00101Be9935f81_current:
+  friendly_name: Patrick Desk Stromstärke
+  unit_of_measurement: mA
+sensor.00101Be9935f81_energy_counter:
+  friendly_name: Patrick Desk Gesamtverbrauch
+  unit_of_measurement: Wh
+sensor.00101Be9935f81_frequency:
+  friendly_name: Patrick Desk Frequenz
+  unit_of_measurement: Hz
+sensor.00101Be9935f81_power:
+  friendly_name: Patrick Desk Verbrauch
+  unit_of_measurement: W
+sensor.00101Be9935f81_voltage:
+  friendly_name: Patrick Desk Spannung
+  unit_of_measurement: V
+
+# Chilis
+switch.00101be9935eef:
+  friendly_name: Chilis Steckdose
+sensor.00101be9935eef_current:
+  friendly_name: Chilis Stromstärke
+  unit_of_measurement: mA
+sensor.00101be9935eef_energy_counter:
+  friendly_name: Chilis Gesamtverbrauch
+  unit_of_measurement: Wh
+sensor.00101be9935eef_frequency:
+  friendly_name: Chilis Frequenz
+  unit_of_measurement: Hz
+sensor.00101be9935eef_power:
+  friendly_name: Chilis Verbrauch
+  unit_of_measurement: W
+sensor.00101be9935eef_voltage:
+  friendly_name: Chilis Spannung
+  unit_of_measurement: V

@@ -29,6 +29,11 @@ homematic:
       host: 192.168.3.230
       username: !secret homematic_ccu2_user
       password: !secret homematic_ccu2_password
+    ip:
+      host: 192.168.3.230
+      username: !secret homematic_ccu2_user
+      password: !secret homematic_ccu2_password
+      port: 2010
 
 logger:
   default: info

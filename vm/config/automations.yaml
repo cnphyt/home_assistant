@@ -98,7 +98,7 @@
   condition: []
   action:
   - service: switch.turn_on
-    entity_id: switch.strom_patrick
+    entity_id: switch.00101be9935eef
 
 - alias: Chili Licht aus
   trigger:
@@ -107,7 +107,7 @@
   condition: []
   action:
   - service: switch.turn_off
-    entity_id: switch.strom_patrick
+    entity_id: switch.00101be9935eef
 
 - alias: Wohnzimmer Netatmo reset
   trigger:
