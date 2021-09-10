@@ -1,0 +1,75 @@
+icon: 'mdi:flash'
+panel: false
+title: Strom
+cards:
+  - title: Chilis Stromstärke
+    type: history-graph
+    entities:
+      - sensor.00101be9935eef_current
+    graph: line
+    detail: 2
+    unit: mA
+  - title: Chilis Gesamtverbrauch
+    type: history-graph
+    entities:
+      - sensor.00101be9935eef_energy_counter
+    graph: line
+    detail: 2
+    unit: Wh
+  - title: Chilis Frequenz
+    type: history-graph
+    entities:
+      - sensor.00101be9935eef_frequency
+    graph: line
+    detail: 2
+    unit: Hz
+  - title: Chilis Vebrauch
+    type: history-graph
+    entities:
+      - sensor.00101be9935eef_power
+    graph: line
+    detail: 2
+    unit: W
+  - title: Chilis Spannung
+    type: history-graph
+    entities:
+      - sensor.00101be9935eef_voltage
+    graph: line
+    detail: 2
+    unit: W
+  - title: Patrick Desk Stromstärke
+    type: history-graph
+    entities:
+      - sensor.00101Be9935f81_current
+    graph: line
+    detail: 2
+    unit: mA
+  - title: Patrick Desk Gesamtverbrauch
+    type: history-graph
+    entities:
+      - sensor.00101Be9935f81_energy_counter
+    graph: line
+    detail: 2
+    unit: Wh
+  - title: Patrick Desk Frequenz
+    type: history-graph
+    entities:
+      - sensor.00101Be9935f81_frequency
+    graph: line
+    detail: 2
+    unit: Hz
+  - title: Patrick Desk Vebrauch
+    type: history-graph
+    entities:
+      - sensor.00101Be9935f81_power
+    graph: line
+    detail: 2
+    unit: W
+  - title: Patrick Desk Spannung
+    type: history-graph
+    entities:
+      - sensor.00101Be9935f81_voltage
+    graph: line
+    detail: 2
+    unit: V
+

@@ -69,3 +69,17 @@ switch:
 lametric:
   client_id:  !secret lametric_client_id
   client_secret: !secret lametric_client_secret
+
+fan:
+  - platform: xiaomi_miio_fan
+    name: Xiaomi Smart Fan Wohnzimmer
+    host: 192.168.3.198
+    token: !secret xiaomi_fan_wozi
+  - platform: xiaomi_miio_fan
+    name: Xiaomi Smart Fan Patrick
+    host: 192.168.3.207
+    token: !secret xiaomi_fan_patrick
+  - platform: xiaomi_miio_fan
+    name: Xiaomi Smart Fan Jenny
+    host: 192.168.3.213
+    token: !secret xiaomi_fan_jenny

@@ -17,6 +17,13 @@ cards:
     entities:
       - group.licht_esstisch
       - light.stripe_kueche
+  - title: Propeller
+    type: entities
+    show_header_toggle: true
+    entities:
+      - fan.xiaomi_smart_fan_jenny
+      - fan.xiaomi_smart_fan_patrick
+      - fan.xiaomi_smart_fan_wohnzimmer
   - title: Schlafzimmer
     type: entities
     show_header_toggle: true
