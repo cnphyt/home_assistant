@@ -97,6 +97,15 @@
     at: '06:00:00'
   condition: []
   action:
+  - service: fan.turn_on
+    entity_id: fan.xiaomi_smart_fan_patrick
+  - service: xiaomi_miio_fan.fan_set_natural_mode_on
+    entity_id: fan.xiaomi_smart_fan_patrick
+  - service: fan.set_percentage
+    target:
+      entity_id: fan.xiaomi_smart_fan_patrick
+    data:
+      percentage: 25
   - service: switch.turn_on
     entity_id: switch.00101be9935eef
 
@@ -106,6 +115,8 @@
     at: '21:00:00'
   condition: []
   action:
+  - service: fan.turn_off
+    entity_id: fan.xiaomi_smart_fan_patrick
   - service: switch.turn_off
     entity_id: switch.00101be9935eef
 
