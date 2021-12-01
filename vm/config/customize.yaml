@@ -72,3 +72,23 @@ sensor.00101be9935eef_power:
 sensor.00101be9935eef_voltage:
   friendly_name: Chilis Spannung
   unit_of_measurement: V
+
+
+# Wohnzimmer
+switch.00101d89a175a7:
+  friendly_name: Wohnzimmer Steckdose
+sensor.00101d89a175a7_current:
+  friendly_name: Wohnzimmer Stromstärke
+  unit_of_measurement: mA
+sensor.00101d89a175a7_energy_counter:
+  friendly_name: Wohnzimmer Gesamtverbrauch
+  unit_of_measurement: Wh
+sensor.00101d89a175a7_frequency:
+  friendly_name: Wohnzimmer Frequenz
+  unit_of_measurement: Hz
+sensor.00101d89a175a7_power:
+  friendly_name: Wohnzimmer Verbrauch
+  unit_of_measurement: W
+sensor.00101d89a175a7_voltage:
+  friendly_name: Wohnzimmer Spannung
+  unit_of_measurement: V

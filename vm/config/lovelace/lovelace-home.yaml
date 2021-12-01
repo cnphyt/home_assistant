@@ -10,7 +10,7 @@ cards:
     show_header_toggle: true
     entities:
       - group.licht_philips
-      - switch.strom_wohnzimmer_2
+      - switch.00101d89a175a7
   - title: Essbereich
     type: entities
     show_header_toggle: true
@@ -39,7 +39,7 @@ cards:
       - switch.00101be9935f81
   - title: Spanner im Keller
     type: picture
-    image: "http://nas.pjhome:9999/latest.jpg"
+    image: "http://nas.pjhome:9999/bambi.gif"
   - title: Fenster
     show_header_toggle: false
     type: entities

@@ -18,6 +18,8 @@
       data:
         brightness: 200
         color_name: sandybrown
+    - service: switch.turn_on
+      entity_id: switch.00101d89a175a7
 
 - alias: Licht aus 90min nach Sonnenaufgang
   trigger:
@@ -73,6 +75,34 @@
       data:
         brightness: 255
         color_name: lightcyan
+
+- alias: Baum aus unter der Woche
+  trigger:
+    platform: time
+    at: '21:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+  action:
+    - service: switch.turn_off
+      entity_id: switch.00101d89a175a7
+
+- alias: Baum aus Wochenende
+  trigger:
+    platform: time
+    at: '22:00:00'
+  condition:
+    condition: time
+    weekday:
+      - sat
+      - sun
+  action:
+    - service: switch.turn_off
+      entity_id: switch.00101d89a175a7
 
 - alias: Sonos Bad Play/Pause Toggle
   trigger:

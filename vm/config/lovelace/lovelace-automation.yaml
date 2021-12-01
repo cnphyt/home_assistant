@@ -12,6 +12,8 @@ cards:
       - entity: automation.schlafzimmer_licht_aus
       - entity: automation.chili_licht_an
       - entity: automation.chili_licht_aus
+      - entity: automation.baum_aus_unter_der_woche
+      - entity: automation.baum_aus_wochenende
   - title: People
     type: entities
     entities:
