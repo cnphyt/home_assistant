@@ -83,3 +83,20 @@ fan:
     name: Xiaomi Smart Fan Jenny
     host: 192.168.3.213
     token: !secret xiaomi_fan_jenny
+
+influxdb:
+  api_version: 2
+  ssl: false
+  host: nas.pjhome
+  port: 49153
+  bucket: pjhome
+  token: !secret influxdb_token
+  organization: !secret influxdb_organization
+  max_retries: 3
+  default_measurement: state
+  exclude:
+    entities:
+      - sun.sun
+    domains:
+      - automation
+      - group
