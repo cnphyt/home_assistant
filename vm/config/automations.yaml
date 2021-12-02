@@ -75,6 +75,8 @@
       data:
         brightness: 255
         color_name: lightcyan
+    - service: switch.turn_on
+      entity_id: switch.00101d89a175a7
 
 - alias: Baum aus unter der Woche
   trigger:
